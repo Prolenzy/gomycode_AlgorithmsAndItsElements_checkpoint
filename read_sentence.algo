@@ -1,0 +1,21 @@
+ALGORITHM read_sentence
+VAR
+    sentence_length : INTEGER := 0;
+    word_count : INTEGER := 0;
+    vowel_count : INTEGER := 0;
+    vowels : char set := {'a', 'e', 'i', 'o', 'u' 'A', 'E', 'I', 'O', 'U'}
+BEGIN
+    Read(sentence_length) : For each character in sentence:
+        sentence_length := sentence_length + 1;
+    Read(word_count) : If character is a space:
+        word_count := word_count + 1;
+    Read(vowel_count) : If character is a vowel:
+        vowel_count := vowel_count + 1;
+    
+    If the last character in a sentence is not a space:
+        increment word_count by 1 for this is the last word;
+    
+    Write(sentence_length : this is the length-of the sentence);
+    Write(word_count : this is the number of words in the sentence); 
+    Write(vowel_count : this is the number of vowels in the sentence)
+END
